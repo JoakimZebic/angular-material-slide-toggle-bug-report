@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+:root {
+  --theme-primary: blue;
+  --theme-primary-contrast: white;
+
+  --theme-accent: #ccff00;
+  --theme-accent-contrast: black;
+
+  --theme-warn: darkred;
+  --theme-warn-contrast: white;
+}
+
+
+$primary: (
+  50 : var(--theme-primary),
+  100 : var(--theme-primary),
+  200 : var(--theme-primary),
+  300 : var(--theme-primary),
+  400 : var(--theme-primary),
+  500 : var(--theme-primary),
+  600 : var(--theme-primary),
+  700 : var(--theme-primary),
+  800 : var(--theme-primary),
+  900 : var(--theme-primary),
+  A100 : var(--theme-primary),
+  A200 : var(--theme-primary),
+  A400 : var(--theme-primary),
+  A700 : var(--theme-primary),
+  contrast: (
+    50: var(--theme-primary-contrast),
+    100: var(--theme-primary-contrast),
+    200: var(--theme-primary-contrast),
+    300: var(--theme-primary-contrast),
+    400: var(--theme-primary-contrast),
+    500: var(--theme-primary-contrast),
+    600: var(--theme-primary-contrast),
+    700: var(--theme-primary-contrast),
+    800: var(--theme-primary-contrast),
+    900: var(--theme-primary-contrast),
+    A100: var(--theme-primary-contrast),
+    A200: var(--theme-primary-contrast),
+    A400: var(--theme-primary-contrast),
+    A700: var(--theme-primary-contrast),
+  )
+);
+
+$accent: (
+  50 : var(--theme-accent),
+  100 : var(--theme-accent),
+  200 : var(--theme-accent),
+  300 : var(--theme-accent),
+  400 : var(--theme-accent),
+  500 : var(--theme-accent),
+  600 : var(--theme-accent),
+  700 : var(--theme-accent),
+  800 : var(--theme-accent),
+  900 : var(--theme-accent),
+  A100 : var(--theme-accent),
+  A200 : var(--theme-accent),
+  A400 : var(--theme-accent),
+  A700 : var(--theme-accent),
+  contrast: (
+    50: var(--theme-accent-contrast),
+    100: var(--theme-accent-contrast),
+    200: var(--theme-accent-contrast),
+    300: var(--theme-accent-contrast),
+    400: var(--theme-accent-contrast),
+    500: var(--theme-accent-contrast),
+    600: var(--theme-accent-contrast),
+    700: var(--theme-accent-contrast),
+    800: var(--theme-accent-contrast),
+    900: var(--theme-accent-contrast),
+    A100: var(--theme-accent-contrast),
+    A200: var(--theme-accent-contrast),
+    A400: var(--theme-accent-contrast),
+    A700: var(--theme-accent-contrast),
+  )
+);
+
+$warn: (
+  50 : var(--theme-warn),
+  100 : var(--theme-warn),
+  200 : var(--theme-warn),
+  300 : var(--theme-warn),
+  400 : var(--theme-warn),
+  500 : var(--theme-warn),
+  600 : var(--theme-warn),
+  700 : var(--theme-warn),
+  800 : var(--theme-warn),
+  900 : var(--theme-warn),
+  A100 : var(--theme-warn),
+  A200 : var(--theme-warn),
+  A400 : var(--theme-warn),
+  A700 : var(--theme-warn),
+  contrast: (
+    50: var(--theme-warn-contrast),
+    100: var(--theme-warn-contrast),
+    200: var(--theme-warn-contrast),
+    300: var(--theme-warn-contrast),
+    400: var(--theme-warn-contrast),
+    500: var(--theme-warn-contrast),
+    600: var(--theme-warn-contrast),
+    700: var(--theme-warn-contrast),
+    800: var(--theme-warn-contrast),
+    900: var(--theme-warn-contrast),
+    A100: var(--theme-warn-contrast),
+    A200: var(--theme-warn-contrast),
+    A400: var(--theme-warn-contrast),
+    A700: var(--theme-warn-contrast),
+  )
+);
+
+$app-theme: mat-light-theme(mat-palette($primary), mat-palette($accent), mat-palette($warn));
+@include angular-material-theme($app-theme);
